@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 != "" ]]
+then
+    killall $1
+else
+    echo "ERROR!!! /---Ingrese el nombre del proceso a eliminar---/"
+fi
+
