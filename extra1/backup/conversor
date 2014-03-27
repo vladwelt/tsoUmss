@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for file in `ls`
+do
+    type_file=`file $file | awk -F" " '{ print $2 }'`
+    if [[ "$type_file" = "MPEG" ]]
+    then
+        echo "tipo de archivo" $type_file
+    fi
+done

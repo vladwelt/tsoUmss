@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for file in `ls`
+do
+    type_file=`file $file | awk -F" " '{ print $2 }'`
+    name_file=`echo $file | awk -F"." '{ print $1 }'`
+    if [[ "$type_file" = "MPEG" ]]
+    then
+        ffmpeg -i $file $name_file"Converted.avi"
+    fi
+done
