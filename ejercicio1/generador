@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir uno dos tres
+cd uno 
+touch 1 2 3 4 5 6 7
+cd ../dos
+touch 8 9 10
+cd ../tres
+touch 11 12 13 14
+cd ..
